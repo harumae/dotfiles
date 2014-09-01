@@ -19,6 +19,7 @@ install ctags
 install w3m
 install watch
 install tree
+install hub
 
 tap sanemat/font
 install ricty
