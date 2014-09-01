@@ -1,0 +1,8 @@
+call submode#enter_with('winsize', 'n', '', '<C-w>>', '<C-w>2>')
+call submode#enter_with('winsize', 'n', '', '<C-w><', '<C-w>2<')
+call submode#enter_with('winsize', 'n', '', '<C-w>+', '<C-w>2+')
+call submode#enter_with('winsize', 'n', '', '<C-w>-', '<C-w>2-')
+call submode#map('winsize', 'n', '', '>', '<C-w>2>')
+call submode#map('winsize', 'n', '', '<', '<C-w>2<')
+call submode#map('winsize', 'n', '', '+', '<C-w>2+')
+call submode#map('winsize', 'n', '', '-', '<C-w>2-')
