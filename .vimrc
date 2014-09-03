@@ -9,7 +9,8 @@ set clipboard=unnamed
 set cmdheight=2
 set complete=.,w,b,u,t,i,d
 set define="^\s*#define|^\sconst"
-set expandtab
+"set expandtab
+set noexpandtab
 set encoding=utf-8
 set fileencodings=utf-8,cp932,euc-jp
 set formatoptions=q
@@ -75,6 +76,7 @@ vnoremap <silent> < <gv
 autocmd QuickFixCmdPost grep,vimgrep copen
 "autocmd FileType php :set tags+=$HOME/.vim/tags/pear.tags
 autocmd BufNewFile,BufRead *.volt set filetype=htmldjango
+autocmd BufNewFile,BufRead *.phtml set filetype=htmldjango
 
 cd ~/Developments/work
 
