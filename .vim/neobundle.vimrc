@@ -30,7 +30,8 @@ NeoBundle 'evidens/vim-twig'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'kana/vim-submode'
-NeoBundle 'Townk/vim-autoclose'
+"NeoBundle 'Townk/vim-autoclose'
+NeoBundle 'tpope/vim-fugitive'
 
 " vim.org
 NeoBundle 'buftabs'

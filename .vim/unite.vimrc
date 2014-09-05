@@ -20,6 +20,10 @@ nnoremap [unite] <Nop>
 nmap <C-u> [unite]
 
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
+call unite#filters#sorter_default#use(['sorter_ftime'])
+call unite#filters#converter_default#use(['converter_file_directory'])
+" call unite#custom_filters('file_rec',
+"     \ ['matcher_default', 'sorter_default', 'converter_smart_path'])
 nnoremap <silent> [unite]<C-b> :<C-u>Unite buffer<CR>
 nnoremap <silent> [unite]<C-f> :<C-u>Unite file_rec/async<CR>
 nnoremap <silent> [unite]<C-u> :<C-u>Unite file_mru<CR>
