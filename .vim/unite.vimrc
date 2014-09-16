@@ -19,11 +19,12 @@ let g:unite_split_rule = 'topleft'
 nnoremap [unite] <Nop>
 nmap <C-u> [unite]
 
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-call unite#filters#sorter_default#use(['sorter_ftime'])
-call unite#filters#converter_default#use(['converter_file_directory'])
-" call unite#custom_filters('file_rec',
-"     \ ['matcher_default', 'sorter_default', 'converter_smart_path'])
+"call unite#filters#matcher_default#use(['matcher_fuzzy'])
+"call unite#filters#sorter_default#use(['sorter_ftime'])
+"call unite#filters#converter_default#use(['converter_file_directory'])
+call unite#custom_source('buffer,file_rec/async,file_mru,grep', 'matchers', 'matcher_fuzzy')
+call unite#custom_source('buffer,file_rec/async,file_mru', 'sorters', 'sorter_ftime')
+call unite#custom_source('buffer,file_rec/async,file_mru', 'converters', 'converter_file_directory')
 nnoremap <silent> [unite]<C-b> :<C-u>Unite buffer<CR>
 nnoremap <silent> [unite]<C-f> :<C-u>Unite file_rec/async<CR>
 nnoremap <silent> [unite]<C-u> :<C-u>Unite file_mru<CR>
@@ -53,7 +54,7 @@ endfunction
 
 if executable('ag')
     let g:unite_source_grep_command = 'ag'
-    let g:unite_source_grep_default_opts = '--nogroup --nocolor'
+    let g:unite_source_grep_default_opts = '--nogroup --nocolor -S'
     let g:unite_source_grep_recursive_opt = ''
 endif
 
