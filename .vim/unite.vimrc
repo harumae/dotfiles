@@ -23,7 +23,7 @@ nmap <C-u> [unite]
 "call unite#filters#sorter_default#use(['sorter_ftime'])
 "call unite#filters#converter_default#use(['converter_file_directory'])
 call unite#custom_source('buffer,file_rec/async,file_mru,grep', 'matchers', 'matcher_fuzzy')
-call unite#custom_source('buffer,file_rec/async,file_mru', 'sorters', 'sorter_ftime')
+call unite#custom_source('buffer,file_rec/async,file_mru,grep', 'sorters', 'sorter_rank')
 call unite#custom_source('buffer,file_rec/async,file_mru', 'converters', 'converter_file_directory')
 nnoremap <silent> [unite]<C-b> :<C-u>Unite buffer<CR>
 nnoremap <silent> [unite]<C-f> :<C-u>Unite file_rec/async<CR>
@@ -58,6 +58,12 @@ if executable('ag')
     let g:unite_source_grep_recursive_opt = ''
 endif
 
-nnoremap <silent> <C-g><C-g> :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+" nnoremap <silent> <C-g><C-g> :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+nnoremap <silent> <C-g><C-g> :<C-u>Unite grep -buffer-name=search-buffer<CR>
 nnoremap <silent> <C-g><C-w> :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-r><C-w><CR>
 nnoremap <silent> <C-g><C-r> :<C-u>UniteResume search-buffer<CR>
+
+" call unite#custom#profile('source/grep', 'context', {
+"     'no_cursor_line' : 1,
+"     'cursor_line_highlight' : 'Normal',
+" })

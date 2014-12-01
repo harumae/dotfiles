@@ -8,6 +8,7 @@ set autoread
 set clipboard=unnamed
 set cmdheight=2
 set complete=.,w,b,u,t,i,d
+set cursorline
 set define="^\s*#define|^\sconst"
 "set expandtab
 set noexpandtab
@@ -15,7 +16,8 @@ set encoding=utf-8
 set fileencodings=utf-8,cp932,euc-jp
 set formatoptions=q
 set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m,%f
-set grepprg=grep\ -rnIH\ --exclude-dir=.svn\ --exclude=tags
+"set grepprg=grep\ -rnIH\ --exclude-dir=.svn\ --exclude=tags
+set grepprg=ag\ --nogroup\ -iS
 set guioptions=a
 set hlsearch
 set ignorecase
@@ -54,6 +56,7 @@ let g:quickrun_config = {
   \ 'hook/time/enable': 1,
   \ }
   \ }
+let phtml_sql_query = 1
 
 " Move splitted window
 nnoremap <silent> <C-k> <C-w>k
@@ -72,11 +75,22 @@ vnoremap <silent> > >gv
 vnoremap <silent> <S-Tab> <gv
 vnoremap <silent> < <gv
 
+" Insert close brackets
+"inoremap { {}<LEFT>
+"inoremap [ []<LEFT>
+"inoremap ( ()<LEFT>
+"inoremap " ""<LEFT>
+"inoremap ' ''<LEFT>
+"inoremap {} {}<LEFT>
+"inoremap [] []<LEFT>
+"inoremap () ()<LEFT>
+"inoremap "" ""<LEFT>
+"inoremap '' ''<LEFT>
+
 "nnoremap <silent> <C-g> :grep <cword> **/*<CR>
 autocmd QuickFixCmdPost grep,vimgrep copen
 "autocmd FileType php :set tags+=$HOME/.vim/tags/pear.tags
-autocmd BufNewFile,BufRead *.volt set filetype=htmldjango
-autocmd BufNewFile,BufRead *.phtml set filetype=htmldjango
+autocmd BufNewFile,BufRead *.volt,*.phtml set filetype=htmldjango
 
 cd ~/Developments/work
 
@@ -86,4 +100,5 @@ source ~/.vim/neocomplcache.vimrc
 source ~/.vim/neosnippet.vimrc
 source ~/.vim/ref.vimrc
 source ~/.vim/submode.vimrc
+"source ~/.vim/syntastic.vimrc
 source ~/.vim/unite.vimrc

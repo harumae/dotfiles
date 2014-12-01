@@ -37,7 +37,7 @@ hi PreProc		  term=underline  ctermfg=darkmagenta   guifg=#ff80ff
 hi Type			  term=underline  cterm=bold ctermfg=lightgreen  gui=bold  guifg=#60ff60
 hi Error		  term=reverse	ctermfg=darkcyan  ctermbg=black  guifg=Red	guibg=Black
 hi Todo			  term=standout  ctermfg=black	ctermbg=darkcyan  guifg=Blue  guibg=Yellow
-hi CursorLine	  term=underline  guibg=#555555 cterm=underline
+hi CursorLine	  term=underline  guibg=#333333 cterm=underline
 hi CursorColumn	  term=underline  guibg=#555555 cterm=underline
 hi MatchParen	  term=reverse  ctermfg=blue guibg=Blue
 hi TabLine		  term=bold,reverse  cterm=bold ctermfg=lightblue ctermbg=white gui=bold guifg=blue guibg=white

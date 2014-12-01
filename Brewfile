@@ -20,6 +20,7 @@ install w3m
 install watch
 install tree
 install hub
+install the_silver_searcher
 
 tap sanemat/font
 install ricty

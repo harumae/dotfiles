@@ -10,6 +10,7 @@ endif
 NeoBundle 'thinca/vim-fontzoom'
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'thinca/vim-qfreplace'
 NeoBundle 'pekepeke/ref-javadoc'
 NeoBundle 'rodjek/vim-puppet'
 NeoBundle 'Shougo/neocomplcache'
@@ -32,6 +33,7 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'kana/vim-submode'
 "NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'tpope/vim-fugitive'
+"NeoBundle 'scrooloose/syntastic'
 
 " vim.org
 NeoBundle 'buftabs'

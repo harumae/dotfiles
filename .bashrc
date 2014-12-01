@@ -6,6 +6,7 @@ alias rm='rm -i'
 alias diff='colordiff --side-by-side --suppress-common-lines --width=`tput cols`'
 alias t='tmux -u'
 alias ctags='/usr/local/bin/ctags'
+alias dh='ssh -t kerberos "ssh root@ldg101.admin.xen.livedoor"'
 
 settitle() {
     printf "\033k$1\033\\"
