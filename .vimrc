@@ -10,8 +10,7 @@ set cmdheight=2
 set complete=.,w,b,u,t,i,d
 set cursorline
 set define="^\s*#define|^\sconst"
-"set expandtab
-set noexpandtab
+set expandtab
 set encoding=utf-8
 set fileencodings=utf-8,cp932,euc-jp
 set formatoptions=q
@@ -92,13 +91,13 @@ autocmd QuickFixCmdPost grep,vimgrep copen
 "autocmd FileType php :set tags+=$HOME/.vim/tags/pear.tags
 autocmd BufNewFile,BufRead *.volt,*.phtml set filetype=htmldjango
 
-cd ~/Developments/work
+cd ~/Developments/
 
 source ~/.vim/lightline.vimrc
 source ~/.vim/neobundle.vimrc
 source ~/.vim/neocomplcache.vimrc
 source ~/.vim/neosnippet.vimrc
 source ~/.vim/ref.vimrc
-source ~/.vim/submode.vimrc
+"source ~/.vim/submode.vimrc
 "source ~/.vim/syntastic.vimrc
-source ~/.vim/unite.vimrc
+"source ~/.vim/unite.vimrc

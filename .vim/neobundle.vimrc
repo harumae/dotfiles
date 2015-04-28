@@ -1,10 +1,17 @@
-set nocompatible
-filetype off
+" Note: Skip initialization for vim-tiny or vim-small.
+if !1 | finish | endif
 
 if has('vim_starting')
+  if &compatible
+    set nocompatible
+  endif
+
+  " Required:
   set runtimepath+=~/.vim/bundle/neobundle.vim
-  call neobundle#rc(expand('~/.vim/bundle'))
 endif
+
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " github
 NeoBundle 'thinca/vim-fontzoom'
@@ -18,7 +25,6 @@ NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimfiler.vim'
-"NeoBundle 'Shougo/vimproc.vim'
 NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/neosnippet.vim'
@@ -31,9 +37,7 @@ NeoBundle 'evidens/vim-twig'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'kana/vim-submode'
-"NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'tpope/vim-fugitive'
-"NeoBundle 'scrooloose/syntastic'
 
 " vim.org
 NeoBundle 'buftabs'
@@ -51,4 +55,11 @@ NeoBundle 'Shougo/vimproc', {
     \   },
     \ }
 
+call neobundle#end()
+
+" Required:
 filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
